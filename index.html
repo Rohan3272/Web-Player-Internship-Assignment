@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/404f163773.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+</head>
+<body>
+    <div class="background-blur">
+        <img id="bg-image" src="assets/album-art/default.jpg" alt="Background Art">
+    </div>
+    
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand"><img src="assets/spotifylogo.png" alt="Spotify"></div>
+
+            <nav>
+                <div class="sidebarmenu">
+                    <span class="sidebar-item" id="for-you">For You</span>
+                    <span class="sidebar-item" id="top-tracks">Top Tracks</span>
+                    <span class="sidebar-item" id="favourites">Favourites</span>
+                    <span class="sidebar-item" id="recently-played">Recently Played</span>
+                </div>
+            </nav>
+            
+
+            <div class="profile">
+                <img src="assets/user.png" alt="User">
+            </div>
+        </aside>
+
+        <!-- Track List -->
+        <main class="track-list">
+            <h2>For You</h2>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search Song, Artist                                                             🔍">
+            </div>
+            
+            <ul id="tracks">
+                <li class="track-item">
+                    <img src="assets/starboycover.png" alt="Song 2">
+                    <div class="track-info">
+                        <span class="title">Starboy</span>
+                        <span class="artist">The Weekend</span>
+                    </div>
+                    <span class="track-duration">4:16</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/demonscover.png" alt="Song 3">
+                    <div class="track-info">
+                        <span class="title">Demons</span>
+                        <span class="artist">Imagine Dragons</span>
+                    </div>
+                    <span class="track-duration">5:24</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/mouthoftherivercover.png" alt="Song 4">
+                    <div class="track-info">
+                        <span class="title">Mouth Of The River</span>
+                        <span class="artist">Imagine Dragons</span>
+                    </div>
+                    <span class="track-duration">6:23</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/ghoststoriescover.png" alt="Song 5">
+                    <div class="track-info">
+                        <span class="title">Ghost Stories</span>
+                        <span class="artist">Coldplay</span>
+                    </div>
+                    <span class="track-duration">3:10</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/sparkscover.png" alt="Song 6">
+                    <div class="track-info">
+                        <span class="title">Sparks</span>
+                        <span class="artist">Coldplay</span>
+                    </div>
+                    <span class="track-duration">4:23</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/vivalavidacover.png" alt="Song 7">
+                    <div class="track-info">
+                        <span class="title">Viva La Vida</span>
+                        <span class="artist">Coldplay</span>
+                    </div>
+                    <span class="track-duration">5:32</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/hymnfortheweekendcover.jpg" alt="Song 8">
+                    <div class="track-info">
+                        <span class="title">Hymn For The Weekend</span>
+                        <span class="artist">Coldplay</span>
+                    </div>
+                    <span class="track-duration">2:23</span>
+                </li>
+                <li class="track-item">
+                    <img src="assets/paincover.jpg" alt="Song 9">
+                    <div class="track-info">
+                        <span class="title">Pain</span>
+                        <span class="artist">Ryan Jones</span>
+                    </div>
+                    <span class="track-duration">3:12</span>
+                </li>
+            </ul>
+        </main>
+        
+
+        <!-- Full-Size Music Player -->
+        <div class="player">
+            <div class="song-info">
+                <h3 id="song-title">Song Title</h3>
+                <p id="artist">Artist Name</p>
+            </div>
+            <div class="album-info">
+                <img id="album-art" src="assets/album-art/default.jpg" alt="Album Art">
+            </div>
+            <input type="range" id="progress" min="0" max="100" value="0">
+            <div class="controls">
+                <div class="menu-dropdown">
+                    <button id="menu"><i class="fa-solid fa-ellipsis"></i></button>
+                    <div class="dropdown-content" id="menuOptions">
+                        <span id="addToFavourites">Add to Favourites</span>
+                    </div>
+                </div>
+                <button id="prev"><i class="fas fa-backward"></i></button>
+                <button id="play"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-forward"></i></button>
+                <div class="volume-container">
+                    <button id="volume-icon"><i class="fas fa-volume-up"></i></button>
+                    <input type="range" id="volume" min="0" max="100" value="100">
+                </div>
+                
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

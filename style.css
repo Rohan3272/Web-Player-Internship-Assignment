@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: #1e1e1e; /* Default background */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    transition: background 1s ease-in-out;
+    overflow: hidden;
+}
+/* Background Blur Effect */
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Keep it behind everything */
+}
+
+.background-blur img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(80px) brightness(30%);
+    transform: scale(1.2); /* Slight zoom for a better effect */
+}
+
+/* Main Layout - Restore Old Layout */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+/* Spotify Logo */
+.brand {
+    display: flex;
+    justify-content: flex-start;
+    width: 133.4px;
+    height: 40px;
+    top: 32px;
+    left: 32px;
+    margin-top: 50px;
+    margin-bottom: 10px; 
+    height: 40px; /* Adjust height if needed */
+}
+
+/* Sidebar Menu Styling */
+.sidebarmenu {
+    text-transform: capitalize;
+    margin-top: 40px; /* Reduce gap between logo and menu */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Reduce spacing between menu items */
+}
+
+/* Sidebar Menu Items */
+.sidebar-item {
+    cursor: pointer;
+    font-size: 20px; /* Slightly smaller font */
+    font-weight: 300; /* Slim font */
+    color: white;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 0.5px; /* Slight spacing for elegance */
+}
+
+/* Make Active & Hovered Items Subtle */
+.sidebar-item:hover,
+.sidebar-item.active {
+    color: #1db954;
+    font-weight: 400; /* Slightly bolder but still slim */
+}
+
+/* To remove list styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile
+{
+    margin-top: 500px;
+}
+/* Track List (Middle Pane) */
+.track-list {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 440px;
+    height: 924px;
+    position: absolute;
+    top: 40px;
+    left: 278px;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+/* "For You" */
+.track-list h2 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+}
+.search-container{
+    position: relative;
+    width: 100%;
+}
+
+/* Search Bar */
+#search {
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+#search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Track Items */
+.track-item {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.track-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+.active-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+
+/* Album Art (Circular) */
+.track-item img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Song Info */
+.track-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.track-info .title {
+    text-transform: capitalize;
+    width: 70%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.track-info .artist {
+    text-transform: capitalize;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Duration */
+.track-duration {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Music Player (Right Pane)*/
+.player {
+    flex: 1.5;
+    width: 480px;
+    height: 708.24px;
+    position: absolute;
+    top: 80px;
+    left: 875px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 40px;
+}
+
+/* Song Info in Player */
+.song-info {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#song-title {
+    text-transform: capitalize;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 0%;
+    width: 184;
+    height: 36px;
+    margin-bottom: 20px;
+    margin-top: 180px;
+}
+#artist {
+    text-transform: capitalize;
+    font-size: 20px;
+    width: 100%;
+    height: 24px;
+    opacity: 0.6;
+}
+
+/* Album Art in Player */
+.album-info img {
+    margin-top: 0px;
+    width: 500px;
+    height: 500px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.album-info img:hover {
+    transform: scale(1.02);
+}
+
+/* Progress Bar - Minimal Design */
+#progress {
+    width: 500px;
+    height: 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    appearance: none;
+    margin: 20px 0 20px;
+}
+
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+/* Playback Controls - Centered Below Progress Bar */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+/* Circular buttons for controls */
+/* Circular buttons for all except next/prev */
+/* General button styling */
+.controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Play Button - White Circle with Black Icon */
+#play {
+    background: white !important;
+    border-radius: 50%;
+    width: 60px; /* Ensure size consistency */
+    height: 60px;
+}
+
+#play i {
+    font-size: 30px; /* Increase play icon size */
+    color: black !important; /* Ensure icon remains black */
+}
+
+/* Menu and Speaker Icons - Bigger but keep white */
+#menu, #volume-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.048); /* Keep circular */
+}
+
+#menu i, #volume-icon i {
+    font-size: 25px; /* Increase size */
+    color: white !important; /* Ensure white color */
+}
+
+/* Forward and Backward Buttons - Keep Smaller */
+#prev i, #next i {
+    font-size: 20px; /* Smaller icons */
+    color: white !important; /* Ensure correct color */
+}
+
+
+
+/* Remove circular effect for next/prev buttons */
+#prev, #next {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    font-size: 24px; /* Adjust icon size */
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Optional: Change color on hover */
+#prev:hover, #next:hover {
+    color: #1db954; /* Spotify Green */
+}
+
+
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Align volume icon with controls */
+.volume-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Position volume slider beside speaker icon */
+#volume {
+    width: 80px;
+    position: absolute;
+    right: -90px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show slider on hover */
+.volume-container:hover #volume {
+    opacity: 1;
+}
+
+/* Menu Dropdown Container */
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 10;
+    right: 0;
+}
+
+/* Dropdown Options */
+.dropdown-content span {
+    color: white;
+    padding: 10px 16px;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.dropdown-content span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show Dropdown When Menu Button is Clicked */
+.menu-dropdown:hover .dropdown-content {
+    display: block;
+}
