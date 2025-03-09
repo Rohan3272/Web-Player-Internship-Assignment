@@ -41,7 +41,7 @@ Solution: Compressed MP3 files to reduce their size and provided an alternative 
 
 
 Note on Responsiveness: <br>
-Due to time constraints, the application is currently not fully responsive. On smaller screens, the player component does not yet adapt as intended (e.g., displaying the player as the main interface with a menu button for the song list).
+On smaller screens, the player component does not yet adapt as intended (e.g., displaying the player as the main interface with a menu button for the song list).
 
 
 Future Improvements: <br>
