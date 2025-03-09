@@ -30,21 +30,21 @@ HTML, CSS, JavaScript
 Local Storage and Session Storage for data persistence
 
 
-Challenges Faced and Solutions
+Challenges Faced and Solutions: 
 Album art missing in the "Top Tracks" section
 Problem: Some tracks in the "Top Tracks" section did not display album art because it was not stored properly in local storage.
 Solution: Updated trackPlayCount() to ensure album art is saved the first time a song is played.
 
-GitHub file size limitations for MP3 uploads
+GitHub file size limitations for MP3 uploads- 
 Problem: GitHub does not allow files larger than 100MB to be uploaded through the web interface.
 Solution: Compressed MP3 files to reduce their size and provided an alternative approach using Google Drive for external hosting.
 
 
-Note on Responsiveness
+Note on Responsiveness: 
 Due to time constraints, the application is currently not fully responsive. On smaller screens, the player component does not yet adapt as intended (e.g., displaying the player as the main interface with a menu button for the song list).
 
 
-Future Improvements
+Future Improvements: 
 Implement backend authentication for persistent user data across devices
 Add a playlist feature allowing users to create and manage custom playlists
 Enable user-uploaded music files for a more personalized experience
