@@ -31,13 +31,13 @@ Local Storage and Session Storage for data persistence
 
 
 Challenges Faced and Solutions: <br>
-Album art missing in the "Top Tracks" section
-Problem: Some tracks in the "Top Tracks" section did not display album art because it was not stored properly in local storage.
-Solution: Updated trackPlayCount() to ensure album art is saved the first time a song is played.
+Album art missing in the "Top Tracks" section <br>
+Problem: Some tracks in the "Top Tracks" section did not display album art because it was not stored properly in local storage.<br>
+Solution: Updated trackPlayCount() to ensure album art is saved the first time a song is played.<br>
 
 GitHub file size limitations for MP3 uploads- <br>
-Problem: GitHub does not allow files larger than 100MB to be uploaded through the web interface.
-Solution: Compressed MP3 files to reduce their size and provided an alternative approach using Google Drive for external hosting.
+Problem: GitHub does not allow files larger than 100MB to be uploaded through the web interface.<br>
+Solution: Compressed MP3 files to reduce their size and provided an alternative approach using Google Drive for external hosting.<br>
 
 
 Note on Responsiveness: <br>
