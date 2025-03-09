@@ -1,4 +1,4 @@
-Music Player - A Web-Based Audio Streaming UI
+<b>Music Player</b>
 
 
 Overview: <br>
